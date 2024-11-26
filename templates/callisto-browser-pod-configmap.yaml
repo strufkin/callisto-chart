@@ -8,4 +8,5 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
-{{ tpl (.Files.Glob "files/browser-pod-manifest.yaml").AsConfig . | indent 2 }}
+  browser-pod-configmap.yaml: |-
+    {{ tpl ($.Files.Get "files/browser-pod-manifest.yaml") . | nindent 4 }}

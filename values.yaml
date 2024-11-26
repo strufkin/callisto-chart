@@ -1,5 +1,5 @@
 # Unique ID of callisto instance
-instanceID: 'unknown'
+instanceID: 'main'
 
 rbac:
   create: true
@@ -32,7 +32,11 @@ callisto:
   podLabels: {}
   podAnnotations: {}
   affinity: {}
-  tolerations: {}
+  tolerations:
+  - key: "workload"
+    operator: "Equal"
+    value: "automation"
+    effect: "NoSchedule"
   service:
     type: "ClusterIP"
   serviceMonitor:
@@ -42,7 +46,7 @@ callisto:
 
   browser:
     name: "chrome"
-    chromeImage: "selenoid/vnc:chrome_80.0"
+    chromeImage: "selenoid/chrome:123.0"
     firefoxImage: "selenoid/vnc:firefox_82.0"
     edgeImage: "browsers/edge:88.0"
     firefoxWebdriverPath: "/wd/hub"  # because selenoid runs inside firefox container
@@ -54,7 +58,11 @@ callisto:
     annotations: {}
     affinity: {}
     resources: {}
-    tolerations: {}
+    tolerations:
+    - key: "workload"
+      operator: "Equal"
+      value: "automation"
+      effect: "NoSchedule"
     hostAliases: []
     env:
     - name: TZ
@@ -101,7 +109,11 @@ nginx:
   volumes: {}
   podAnnotations: {}
   affinity: {}
-  tolerations: {}
+  tolerations:
+  - key: "workload"
+    operator: "Equal"
+    value: "automation"
+    effect: "NoSchedule"
   service:
     type: "ClusterIP"
   serviceMonitor:
@@ -134,8 +146,11 @@ selenoidUi:
     type: "ClusterIP"
   volumes: {}
   affinity: {}
-  tolerations: {}
-
+  tolerations:
+  - key: "workload"
+    operator: "Equal"
+    value: "automation"
+    effect: "NoSchedule"
 ingress:
   enabled: true
   annotations:
