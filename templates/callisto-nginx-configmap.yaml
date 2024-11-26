@@ -8,4 +8,4 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
-{{ tpl (.Files.Glob "files/callisto-nginx.conf").AsConfig . | indent 2 }}
+  {{ tpl (.Files.Glob "files/callisto-nginx.conf").AsConfig . | indent 2 }}
