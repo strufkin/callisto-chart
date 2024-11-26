@@ -13,6 +13,6 @@ entries:
     sources:
     - https://github.com/wrike/callisto
     urls:
-    - https://raw.githubusercontent.com/wrike/callisto-chart/callisto-1.8.1.tgz
+    - https://github.com/strufkin/callisto-chart/raw/refs/heads/master/docs/callisto-1.8.1.tgz
     version: 1.8.1
 generated: "2024-11-26T14:05:01.1350898+02:00"
