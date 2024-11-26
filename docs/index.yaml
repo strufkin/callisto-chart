@@ -3,7 +3,7 @@ entries:
   callisto:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2024-11-26T16:54:27.7813843+02:00"
+    created: "2024-11-26T17:05:10.9609367+02:00"
     description: A Helm chart for Callisto
     digest: 33e4fed44f242c79500efe69e3bcf64c377e814995c6efc1cbaae5cb4f031f6e
     maintainers:
@@ -15,4 +15,19 @@ entries:
     urls:
     - https://github.com/strufkin/callisto-chart/raw/refs/heads/master/docs/callisto-1.8.1.tgz
     version: 1.8.1
-generated: "2024-11-26T16:54:27.7798304+02:00"
+  - apiVersion: v1
+    appVersion: 1.0.1
+    created: "2024-11-26T17:05:10.9598315+02:00"
+    description: A Helm chart for Callisto
+    digest: f6ae9f7645149074a7a8672dacc6d1c73109b6e81c2a65ffe5a51eab67818fa6
+    maintainers:
+    - email: devops+oss@team.wrike.com
+      name: Wrike DevOps Team
+    name: callisto
+    sources:
+    - https://github.com/strufkin/callisto-chart
+    - https://github.com/wrike/callisto
+    urls:
+    - https://github.com/strufkin/callisto-chart/raw/refs/heads/master/docs/callisto-1.8.1-r1.tgz
+    version: 1.8.1-r1
+generated: "2024-11-26T17:05:10.9576907+02:00"
